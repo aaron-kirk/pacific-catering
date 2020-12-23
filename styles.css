@@ -15,7 +15,7 @@ body {
     width: 100vw;
     height: 10vh;
     display: flex;
-    backdrop-filter: blur(3px);
+    background-color: rgb(245, 237, 237);
     z-index: 2;
     transition: top .4s ease;
 }
