@@ -37,6 +37,7 @@ let removeAllActive = () => {
     corporateButton.classList.remove("active");
 }
 
+/*
 document.addEventListener("scroll", (e) => {
     let scrollDistance = window.pageYOffset;
 
@@ -47,4 +48,21 @@ document.addEventListener("scroll", (e) => {
         console.log("Scrolled up");
         nav.style.boxShadow = "none";
     }
+});/**/
+
+let prevScrollDistance;
+let isNavShown = true;
+
+document.addEventListener("scroll", (e) => {
+    let scrollDistance = window.pageYOffset;
+
+    if(scrollDistance < 0.05*window.innerHeight) {
+        nav.style.top = "0";
+    } else if(scrollDistance < prevScrollDistance) {
+        nav.style.top = "0";
+      } else {
+        nav.style.top = "-10vh";
+      }
+
+    prevScrollDistance = scrollDistance
 });

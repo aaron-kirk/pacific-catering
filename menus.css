@@ -8,13 +8,14 @@
 
 .menu-header {
     position: relative;
-    height: 30vh;
+    height: 40vh;
 }
 
 .menu-header img {
-    height: 30vh;
+    height: 40vh;
     width: 100vw;
     object-fit: cover;
+    object-position: 0% 50%;
 }
 
 .menu-header h1 {
