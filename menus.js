@@ -86,7 +86,7 @@ document.addEventListener("scroll", (e) => {
         nav.style.boxShadow = "none";
     } else if(scrollDistance < prevScrollDistance) {
         nav.style.top = "0";
-        nav.style.boxShadow = "0 0 5px 0";
+        nav.style.boxShadow = "0 0 10px 0";
       } else {
         nav.style.top = "-10vh";
         nav.style.boxShadow = "none";
