@@ -110,12 +110,116 @@
     background-color: rgb(88, 204, 123);
     padding-left: 27.5vw;
     align-items: center;
+    clip-path: polygon(0 0, 100% 10vh, 100% 100%, 0 100%);
 }
 
 .order-section h1 {
     font-family: 'Satisfy', cursive;
     color: white;
     font-size: 50px;
+    margin-bottom: 2vh;
+}
+
+.order-section .hire-us-green {
+    border: 4px solid white;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    transition: color .25s ease, background-color .25s ease !important;
+    font-size: 24px;
+}
+
+.order-section .hire-us-green:hover {
+    color: rgb(88, 204, 123);
+    background-color: white;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #535657;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    padding: 0 25vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    margin: 0 2vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: white;
+    font-size: 2vh;
+}
+
+.footer-spacer {
+    width: 5px;
+    height: 4vh;
+    background-color: white;
+}
+
+/* ORIGINAL HOMEPAGE */
+
+.page-wrapper {
+    background-color: rgb(245, 237, 237);
+}
+
+.invisible {
+    width: 100vw;
+    height: 100vh;
+}
+
+.homepage-container {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    z-index: -1;
+}
+
+.homepage-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage-image {
+    position: relative;
+    margin-right: 10vw;
+    width: 40vw;
+}
+
+.homepage-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.homepage-card {
+    margin-left: 5vw;
+    width: 35vw;
+}
+
+.homepage-card h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 50px;
+}
+
+.homepage-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    padding-bottom: 5vh;
+    font-weight: 300;
+}
+
+.homepage-card .hire-us {
+    font-size: 24px;
 }
 
 .underline {

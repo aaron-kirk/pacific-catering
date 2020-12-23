@@ -62,26 +62,17 @@ let removeAllActive = () => {
     corporateButton.classList.remove("active");
 }
 
-/*
-document.addEventListener("scroll", (e) => {
-    let scrollDistance = window.pageYOffset;
-
-    if(scrollDistance > 0.05*window.innerHeight) {
-        console.log("Scrolled down");
-        nav.style.boxShadow = "0px 0px 5px 0px";
-    } else {
-        console.log("Scrolled up");
-        nav.style.boxShadow = "none";
-    }
-});/**/
-
 let prevScrollDistance;
 let isNavShown = true;
 
 document.addEventListener("scroll", (e) => {
     let scrollDistance = window.pageYOffset;
 
-    if(scrollDistance < 0.05*window.innerHeight) {
+    if(scrollDistance + window.innerHeight >= document.body.offsetHeight) {
+        nav.style.top = "0";
+        nav.style.boxShadow = "none";
+        console.log("ran");
+    } else if(scrollDistance < 0.05*window.innerHeight) {
         nav.style.top = "0";
         nav.style.boxShadow = "none";
     } else if(scrollDistance < prevScrollDistance) {
