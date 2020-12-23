@@ -6,7 +6,29 @@
     align-items: center;
 }
 
-.menu-list {
+.menu-header {
+    position: relative;
+    height: 30vh;
+}
+
+.menu-header img {
+    height: 30vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+.menu-header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Satisfy', cursive;
+    font-size: 15vh;
+    color: white;
+}
+
+.menu-selector {
+    margin: 5vh 0;
     display: flex;
     justify-content: space-between;
     font-family: 'Montserrat', sans-serif;
@@ -14,12 +36,12 @@
     list-style: none;
 }
 
-.menu-list li {
+.menu-selector li {
     background-color: rgb(212, 233, 217);
     text-align: center;
 }
 
-.menu-list li a {
+.menu-selector li a {
     display: inline-block;
     width: 10vw;
     padding: 10px 0px;
@@ -27,19 +49,56 @@
     transition: background-color .25s ease, color .25s ease;
 }
 
-.menu-list .active {
+.menu-selector .active {
     background-color: rgb(88, 204, 123);
     color: white !important;
 }
 
-.menu-list li a:hover {
+.menu-selector li a:hover {
     background-color: rgb(88, 204, 123);
     color: white !important;
     cursor: pointer;
 }
 
-.container h1 {
-    font-family: 'Satisfy', cursive;
-    font-size: 50px;
+.menu-title {
     margin-bottom: 5vh;
+    font-family: 'Satisfy', cursive;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5vw;
+    width: 45vw;
+}
+
+.menu-item {
+    margin-bottom: 2vh;
+}
+
+.menu-item h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: rgb(107, 167, 125);
+    margin-bottom: 1vh;
+}
+
+.menu-item p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.menu-item .caption {
+    margin-top: 1vh;
+    text-align: right;
+    color: rgb(100, 100, 100);
+    font-size: small;
+}
+
+.underline {
+    padding: 0px 5px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 25%, rgba(35,207,87,1) 25%, rgba(35,207,87,1) 35%, rgba(255,255,255,0) 35%);
 }
