@@ -1,13 +1,15 @@
-let nav = document.querySelector(".nav");
+const nav = document.querySelector(".nav");
 
-let appetizerButton = document.querySelector("#appetizer");
-let lunchButton = document.querySelector("#lunch");
-let dinnerButton = document.querySelector("#dinner");
-let corporateButton = document.querySelector("#corporate");
+const appetizerButton = document.querySelector("#appetizer");
+const lunchButton = document.querySelector("#lunch");
+const dinnerButton = document.querySelector("#dinner");
+const corporateButton = document.querySelector("#corporate");
 
-let menuTitle = document.querySelector(".menu-title");
+const menuTitle = document.querySelector(".menu-title");
+const menuDiv = document.querySelector(".menu");
 
 let currentMenu = "appetizer";
+showMenu(currentMenu);
 
 function showMenu(menu) {
     removeAllActive();
@@ -17,37 +19,49 @@ function showMenu(menu) {
         case "appetizer":
             appetizerButton.classList.add("active");
             menuTitle.style.opacity = "0";
+            menuDiv.style.opacity = "0";
             setTimeout(() => {
                 menuTitle.innerHTML = "Appetizer Menu";
+                menuDiv.innerHTML = appetizerMenu;
                 menuTitle.style.opacity = "1";
-            }, 250);
+                menuDiv.style.opacity = "1";
+            }, 500);
             break;
         
         case "lunch":
             lunchButton.classList.add("active");
             menuTitle.style.opacity = "0";
+            menuDiv.style.opacity = "0";
             setTimeout(() => {
                 menuTitle.innerHTML = "Lunch Menu";
+                menuDiv.innerHTML = appetizerMenu;
                 menuTitle.style.opacity = "1";
-            }, 250);
+                menuDiv.style.opacity = "1";
+            }, 500);
             break;
         
         case "dinner":
             dinnerButton.classList.add("active");
             menuTitle.style.opacity = "0";
+            menuDiv.style.opacity = "0";
             setTimeout(() => {
                 menuTitle.innerHTML = "Dinner Menu";
+                menuDiv.innerHTML = appetizerMenu;
                 menuTitle.style.opacity = "1";
-            }, 250);
+                menuDiv.style.opacity = "1";
+            }, 500);
             break;
 
         case "corporate":
             corporateButton.classList.add("active");
             menuTitle.style.opacity = "0";
+            menuDiv.style.opacity = "0";
             setTimeout(() => {
                 menuTitle.innerHTML = "Corporate Menu";
+                menuDiv.innerHTML = appetizerMenu;
                 menuTitle.style.opacity = "1";
-            }, 250);
+                menuDiv.style.opacity = "1";
+            }, 500);
             break;
 
         default:
@@ -55,7 +69,7 @@ function showMenu(menu) {
     }
 }
 
-let removeAllActive = () => {
+function removeAllActive() {
     appetizerButton.classList.remove("active");
     lunchButton.classList.remove("active");
     dinnerButton.classList.remove("active");
