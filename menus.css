@@ -1,24 +1,48 @@
+/* NAV */
+
+.nav {
+    top: 0vh;
+    background-color: transparent;
+}
+
+.nav a {
+    color: white;
+}
+
+/* CONTAINER */
+
 .container {
     display: flex;
     width: 100vw;
-    margin-top: 5vh;
     flex-direction: column;
     align-items: center;
 }
 
+/* HEADER */
+
 .menu-header {
     position: relative;
-    height: 40vh;
+    height: 100vh;
+    width: 100vw
 }
 
 .menu-header img {
-    height: 40vh;
+    height: 100vh;
     width: 100vw;
     object-fit: cover;
-    object-position: 0% 50%;
+    object-position: 0% 50;
 }
 
-.menu-header h1 {
+.h1-wrapper {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(0,0,0,.3);
+}
+
+.h1-wrapper h1 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -27,6 +51,8 @@
     font-size: 15vh;
     color: white;
 }
+
+/* MENU SELECTOR */
 
 .menu-selector {
     margin: 5vh 0;
@@ -60,6 +86,8 @@
     color: white !important;
     cursor: pointer;
 }
+
+/* MENU */
 
 .menu-title {
     margin-bottom: 5vh;

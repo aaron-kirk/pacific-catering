@@ -15,7 +15,4 @@ body.addEventListener("mousemove", (e) => {
     let yTrans = maxTranslation*yPos/screen.height;
 
     img.style.transform = `translateX(${xTrans}%) translateY(${yTrans}%)`;
-    /*img.style.transform = `rotateY(50deg)`;*/
-
-    console.log(xTrans, yTrans);
 });

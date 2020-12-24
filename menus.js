@@ -1,4 +1,5 @@
 const nav = document.querySelector(".nav");
+const navlinks = document.querySelectorAll(".nav a");
 
 const appetizerButton = document.querySelector("#appetizer");
 const lunchButton = document.querySelector("#lunch");
@@ -7,6 +8,7 @@ const corporateButton = document.querySelector("#corporate");
 
 const menuTitle = document.querySelector(".menu-title");
 const menuDiv = document.querySelector(".menu");
+const menuDelay = 250;
 
 let currentMenu = "appetizer";
 showMenu(currentMenu);
@@ -14,7 +16,7 @@ showMenu(currentMenu);
 function showMenu(menu) {
     removeAllActive();
     currentMenu = menu;
-    console.log(menuTitle);
+
     switch (menu) {
         case "appetizer":
             appetizerButton.classList.add("active");
@@ -25,7 +27,7 @@ function showMenu(menu) {
                 menuDiv.innerHTML = appetizerMenu;
                 menuTitle.style.opacity = "1";
                 menuDiv.style.opacity = "1";
-            }, 500);
+            }, menuDelay);
             break;
         
         case "lunch":
@@ -37,7 +39,7 @@ function showMenu(menu) {
                 menuDiv.innerHTML = appetizerMenu;
                 menuTitle.style.opacity = "1";
                 menuDiv.style.opacity = "1";
-            }, 500);
+            }, menuDelay);
             break;
         
         case "dinner":
@@ -49,7 +51,7 @@ function showMenu(menu) {
                 menuDiv.innerHTML = appetizerMenu;
                 menuTitle.style.opacity = "1";
                 menuDiv.style.opacity = "1";
-            }, 500);
+            }, menuDelay);
             break;
 
         case "corporate":
@@ -61,7 +63,7 @@ function showMenu(menu) {
                 menuDiv.innerHTML = appetizerMenu;
                 menuTitle.style.opacity = "1";
                 menuDiv.style.opacity = "1";
-            }, 500);
+            }, menuDelay);
             break;
 
         default:
@@ -83,13 +85,24 @@ document.addEventListener("scroll", (e) => {
     let scrollDistance = window.pageYOffset;
 
     if(scrollDistance + window.innerHeight >= document.body.offsetHeight) {
+        navlinks.forEach((link) => {
+            link.style.color = "black";
+        });
         nav.style.top = "0";
         nav.style.boxShadow = "none";
-        console.log("ran");
-    } else if(scrollDistance < 0.05*window.innerHeight) {
+        nav.style.backgroundColor = "rgb(245, 237, 237)";
+    } else if(scrollDistance <= 0.9*window.innerHeight) {
+        navlinks.forEach((link) => {
+            link.style.color = "white";
+        });
         nav.style.top = "0";
         nav.style.boxShadow = "none";
+        nav.style.backgroundColor = "transparent";
     } else if(scrollDistance < prevScrollDistance) {
+        navlinks.forEach((link) => {
+            link.style.color = "black";
+        });
+        nav.style.backgroundColor = "rgb(245, 237, 237)";
         nav.style.top = "0";
         nav.style.boxShadow = "0 0 10px 0";
       } else {

@@ -2,7 +2,12 @@ body {
     overflow: hidden;
 }
 
+.nav a {
+    color: black;
+}
+
 .container {
+    margin-top: 10vh;
     width: 100vw;
     height: 90vh;
     display: flex;
