@@ -46,7 +46,7 @@ body {
     margin-right: 5vw;
 }
 
-.nav a { 
+.nav a {
     text-decoration: none;
     transition: color .25s ease;
 }

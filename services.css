@@ -27,8 +27,8 @@ body {
 
 .services-header {
     position: relative;
+    width: 100vw;
     height: 100vh;
-    width: 100vw
 }
 
 .services-header img {
@@ -57,6 +57,40 @@ body {
     color: white;
 }
 
+/* DIVIDER */
+
+.divider {
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(88, 204, 123);
+}
+
+.divider h1 {
+    font-family: 'Satisfy', cursive;
+    color: white;
+    font-size: 50px;
+    margin-left: 3vw;
+}
+
+.menu-button {
+    border: 4px solid white;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    transition: color .25s ease, background-color .25s ease !important;
+    font-size: 24px;
+}
+
+.menu-button:hover {
+    color: rgb(88, 204, 123);
+    background-color: white;
+}
+
 /* SERVICES */
 
 .services-content {
@@ -69,21 +103,31 @@ body {
     display: flex;
 }
 
-.service .content, .service .image {
-    height: 100vh;
-    width: 50vw;
-}
-
 .service .content {
+    height: 100vh;
+    width: 40vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 4vw;
+}
+
+.service .image {
+    height: 100vh;
+    width: 60vw;
+}
+
+.service img {
+    height: 100vh;
+    width: 60vw;
+    object-fit: cover;
 }
 
 .service .content h1 {
     font-family: 'Satisfy', cursive;
     font-size: 50px;
+    margin-bottom: 2vh;
 }
 
 .service .content p {
@@ -91,23 +135,18 @@ body {
     font-size: 24px;
 }
 
+
 #special-events .content {
-    background-color: rgb(88, 204, 123);
-    background-color: #06d6a0;
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-color: #535657;
+    color: white;
 }
 
 #weddings .content {
-    background-color: rgb(222, 151, 204);
-    background-color: #ffd166;
-    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    background-color: rgb(255, 209, 102);
 }
 
 #corporate .content {
-    background-color: rgb(51, 124, 168);
-    background-color: #118ab2;
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    background-color: rgb(88, 204, 123);
 }
 
 /* FOOTER */
