@@ -8,7 +8,7 @@ const corporateButton = document.querySelector("#corporate");
 
 const menuTitle = document.querySelector(".menu-title");
 const menuDiv = document.querySelector(".menu");
-const menuDelay = 250;
+const menuDelay = 375;
 
 let currentMenu = "appetizer";
 showMenu(currentMenu);

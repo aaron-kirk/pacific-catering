@@ -99,7 +99,7 @@ body {
     font-family: 'Satisfy', cursive;
     font-weight: 700;
     font-size: 50px;
-    transition: opacity .5s ease;
+    transition: opacity .375s ease;
 }
 
 .menu {
@@ -109,7 +109,7 @@ body {
     column-gap: 5vw;
     width: 45vw;
     min-height: 50vh;
-    transition: opacity .5s ease;
+    transition: opacity .375s ease;
 }
 
 .menu-item {

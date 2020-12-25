@@ -116,12 +116,19 @@ body {
 .service .image {
     height: 100vh;
     width: 60vw;
+    overflow: hidden;
 }
 
 .service img {
-    height: 100vh;
+    height: 130vh;
     width: 60vw;
     object-fit: cover;
+    position: relative;
+    top: -30vh;
+}
+
+#special-events img {
+    object-position: 0% 50%;
 }
 
 .service .content h1 {
